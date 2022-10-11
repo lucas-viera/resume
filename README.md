@@ -1,2 +1,3 @@
-# resume
-Website to use as a online resume
+# Resume website
+
+Website to use as a online resume.
