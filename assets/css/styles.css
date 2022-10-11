@@ -10,7 +10,7 @@
   --secondary-shadow: #C1CFC0;
   --bottom-margin: 0.5rem;
   --bottom-margin-2: 1rem;
-  --line-height: 1.7rem;
+  --line-height: 1.6rem;
   --transition: 0.3s;
 }
 
@@ -72,11 +72,26 @@ nav a:hover {
   border-bottom: 2px solid var(--secondary-color);
 }
 nav ul {
-  display: flex;  /*Flexbox used to show ul items inline*/
+  /* display: flex;  Flexbox used to show ul items inline
   gap: 1.9rem;
+  position: fixed;
+  background-color: var(--bg-color);
+  flex-direction: column;
+  top: 5rem;
+  left: 10%;
+  width: 80%;
+  text-align: center;
+  transform: translateX(120%);
+  transition: transform 0.5s ease-in; */
+  display: flex;
+  gap: 2rem;
 }
 nav ul li {
   font-weight: var(--bold-font);
+}
+
+nav ul.show {
+  transform: translateX(0);
 }
 
 /*Burger menu button*/
@@ -86,8 +101,7 @@ nav ul li {
   border: 0;
   background-color: transparent;
   cursor: pointer;
-  display: flex;
-  display:none;    /*Buger menu button will be hidden by default and visible on mobile*/
+  display: none;  /* Buger menu button will be hidden by default and visible on mobile */
 }
 
 /* About me section styles */
@@ -352,26 +366,30 @@ ion-icon {
 
   nav ul {
     /* Style to make it go downwards. It will be hidden for now 
-      until we learn how to animate the burger button */
-      display: none;
-    /* position: fixed; */
-    /* background-color: var(--bg-color); */
-    /* flex-direction: column; */
-    /* top: 85px; */
-    /*left: 67%;*/  /* We want drop down menu to move below the burger button*/
-    /*width: 20%;*/ /* We want drop down menu to use 20% of screen width*/
-    /* text-align: right; */
-    /* transition: 0.5s ease-in; */
+    until we learn how to animate the burger button */
+    position: fixed;
+    background-color: var(--bg-color);
+    flex-direction: column;
+    top: 5rem;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    transform: translateX(120%);
+    transition: transform 0.5s ease-in;
   }
 
   nav ul li {
-    margin: 8px;
+    margin: 0.5px;
   }
 
   .burger-menu-btn {
     display: block;
   }
-
+  
+  nav ul.show {
+    transform: translateX(0);
+  }
+  
   .profile {
     margin-top: 0.5rem;
     flex-direction: column;
