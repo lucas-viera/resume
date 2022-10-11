@@ -1,0 +1,450 @@
+:root {
+  --font-family:"Roboto", sans-serf;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fefefe;
+  --primary-color: #11324D;
+  --secondary-color: #6B7AA1;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #C1CFC0;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CSS Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--secondary-color)
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+/* Nav bar style */
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;     /*Value of 1 is to show the nav var over any other element*/
+  display: flex;
+  justify-content:space-around; /* Flexbox for Nav - Main axis*/
+  align-items: center;          /* Flexbox for Nav - Secondary axis*/
+  padding: 1rem 3rem;
+  background-color: var(--bg-color);
+  box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+}
+
+nav img {
+  width: 44px;
+  height: 44px;
+}
+nav h1 {
+  color: var(--primary-color);
+}
+nav a {
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+nav a:hover {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--secondary-color);
+}
+nav ul {
+  display: flex;  /*Flexbox used to show ul items inline*/
+  gap: 1.9rem;
+}
+nav ul li {
+  font-weight: var(--bold-font);
+}
+
+/*Burger menu button*/
+.burger-menu-btn {
+  color: var(--primary-color);
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  display:none;    /*Buger menu button will be hidden by default and visible on mobile*/
+}
+
+/* About me section styles */
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 69rem;
+  margin: auto;
+}
+
+.profile img {
+  height: 15rem;
+  width: 15rem;
+}
+
+.bio {
+  width: 25rem;
+  padding: 0.6rem;
+  border-radius: 6px;
+  box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+  margin-bottom: var(--bottom-margin);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.bio h1 {
+  margin-bottom: var(--bottom-margin);
+}
+
+.bio p {
+  line-height: var(--line-height);
+  padding: 0.3rem 0;
+}
+
+.about-me {
+  display: flex;            /* Flexbox for about me section*/
+  flex-direction: column;
+  background-color: var(--bg-color);
+  padding: 1rem 6rem;
+  
+}
+
+.about-me h2 {
+  align-items: center;
+  margin-bottom: var(--bottom-margin);
+  text-align: center;
+}
+
+.about-me p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;    /* Main axis*/
+  align-items: center;        /*Secondary axis*/
+  text-align: center;
+  line-height: var(--line-height);
+  padding: 0.4rem;
+}
+
+/* Skills section */  
+.skills {
+  display: flex;
+  flex-direction: column;
+  max-width: 75rem;
+  margin: auto;
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.skill-header {
+  margin-bottom: 1rem;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;  /*Main axis*/
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+}
+
+.icon{
+  height: 11rem;
+  width: 11rem;
+  margin: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.icon-card {
+  background-color: #ffffff;
+  border-radius: 11px;
+  box-shadow: 0 3px 5px var(--primary-shadow);
+  padding: 1rem;
+  margin: 1rem;
+  height: 6rem;
+  width: 6rem;
+}
+
+.icon-card:hover {
+  cursor:pointer;
+}
+
+/* Projects Styles */
+.projects {
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 6rem;
+  margin-top: 4rem;
+}
+
+.project-img {
+  width: 65%;
+  height: 60%;
+}
+
+.projects-container {
+  display: flex;            /* Flexbox for Projects*/
+  justify-content: center;  /*Main axis*/
+  align-items: center;      /*Secondary axis*/
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.project-container {
+  text-align: center;
+  width: 15rem;
+  padding: 1rem;
+}
+
+.project-container p {
+  padding: 0.4rem;
+}
+
+.project-title {
+  margin-bottom: var(--bottom-margin);
+}
+
+.project-details {
+  margin-bottom: var(--bottom-margin);
+}
+
+.project-card {
+  background-color: #ffffff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  padding: 20px;
+  margin: 10px;
+}
+
+.project-card:hover {
+  cursor: pointer;
+}
+
+/* Contact style */
+.contact {
+  margin-top: 2rem;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: var(--bottom-margin-2);
+}
+
+.contact-form-container {
+  max-width: 41rem;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+}
+
+.contact-form-container label {
+  line-height: 3rem;
+  font-weight: var(--bold-font);
+  color: var(--primary-color);
+}
+
+.contact-form-container textarea {
+  min-height: 6rem;
+  font-size: 14px;
+}
+
+.contact-form-container .input-field {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  border: 2px outset var(--primary-color);
+  font-size: 1rem;
+  outline: none;
+  resize: none;
+}
+
+.send-btn {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #ffffff;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: var(--bold-font);
+  transition: var(--transition);
+}
+
+.send-btn:hover {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  padding: 1.25rem;
+  text-align: center;
+  margin: 2rem 0 0;
+  background-color: var(--bg-color);
+  box-shadow: 0 3px 5px rgba(0,0,0, 0.1)
+}
+
+
+footer span {
+  display: flex;    /* Flexbox for footer span*/
+  justify-content: center;  /* Main axis*/
+  align-items: center;      /*Secondary axis*/
+  margin: 0;
+}
+
+footer a {
+  transition: color 0.3s ease;
+  color: var(--primary-color);
+  text-decoration: none;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+footer a:hover {
+  color:var(--secondary-color);
+  cursor: pointer;
+}
+
+ion-icon {
+  font-size: 2rem;
+  color:var(--primary-color);
+}
+
+/* Media queries for medium-sized devices */
+@media (max-width: 720px) {
+  nav {
+    padding: 1.5rem 1rem;
+  }
+
+  nav ul {
+    /* Style to make it go downwards. It will be hidden for now 
+      until we learn how to animate the burger button */
+      display: none;
+    /* position: fixed; */
+    /* background-color: var(--bg-color); */
+    /* flex-direction: column; */
+    /* top: 85px; */
+    /*left: 67%;*/  /* We want drop down menu to move below the burger button*/
+    /*width: 20%;*/ /* We want drop down menu to use 20% of screen width*/
+    /* text-align: right; */
+    /* transition: 0.5s ease-in; */
+  }
+
+  nav ul li {
+    margin: 8px;
+  }
+
+  .burger-menu-btn {
+    display: block;
+  }
+
+  .profile {
+    margin-top: 0.5rem;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .profile img {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .bio {
+    width: 20rem;
+  }
+
+  .about-me {
+    margin-top: 2rem;
+    padding: 1rem 3rem;
+  }
+
+  .about-me h2 {
+    text-align: center;
+  }
+
+  .about-me p {
+    text-align: justify;
+  }
+
+  .icon {
+    width: 3rem;
+    height: 3rem;
+  }
+  .icon-card {
+    padding: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+  }
+  .projects-container {
+    flex-direction: column;
+  }
+
+  .project-container {
+    width: 15rem;
+  }
+  
+  .contact-form-container {
+    max-width: 15rem;
+  }
+}
+
+/* Media queries for smaller devices */
+@media screen and (max-width: 420px) {
+  .profile img {
+    height: 10rem;
+    width: 10rem;
+  }
+  .bio {
+    width: 18rem;
+  }
+  .icon {
+    width: 3rem;
+    height: 3rem;
+  }
+  .icon-card {
+    padding: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+  }
+  .project-container {
+    width: 10rem;
+  }
+
+  .contact-form-container {
+    max-width: 10rem;
+  }
+} 
