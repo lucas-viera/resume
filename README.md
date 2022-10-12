@@ -1,5 +1,3 @@
-# Resume website
-
-Website to use as a online resume.
+# Online Resume
 
 ## [Visit here](https://lucas-viera.github.io/resume/)
